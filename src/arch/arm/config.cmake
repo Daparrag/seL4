@@ -39,6 +39,7 @@ config_choice(KernelARMPlatform ARM_PLAT "Select the platform for the architectu
     "rpi3;KernelPlatformRpi3;PLAT_BCM2837;KernelArchARM"
     "tx1;KernelPlatformTx1;PLAT_TX1;KernelSel4ArchAarch64"
     "tx2;KernelPlatformTx2;PLAT_TX2;KernelSel4ArchAarch64"
+	"rcar_h3ulcb;KernelPlatformRcarH3ULCB;PLAT_RcarH3ULCB;KernelSel4ArchAarch64" 
 )
 
 if(KernelArchARM)
@@ -95,7 +96,7 @@ include(src/plat/tx1/config.cmake)
 include(src/plat/tx2/config.cmake)
 include(src/plat/zynq7000/config.cmake)
 include(src/plat/zynqmp/config.cmake)
-
+include(src/plat/renesas-h3ulcb/config.cmake)
 # Now enshrine all the common variables in the config
 config_set(KernelArmCortexA7 ARM_CORTEX_A7 "${KernelArmCortexA7}")
 config_set(KernelArmCortexA8 ARM_CORTEX_A8 "${KernelArmCortexA8}")

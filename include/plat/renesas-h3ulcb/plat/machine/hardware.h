@@ -1,5 +1,5 @@
 /*
- * Copyright 2019, Diego Guzman <daparrag@correo.udistrital.edu.co>
+ * * Copyright 2019, Diego Guzman <daparrag@correo.udistrital.edu.co>
  * implemented for renesas rcar-H3 ULCB starter kit. 
  *
  * Copyright 2018, Data61
@@ -13,11 +13,23 @@
  * @TAG(DATA61_GPL)
  */
 
-#include <arch/machine.h>
+#ifndef __PLAT_MACHINE_HARDWARE_H
+#define __PLAT_MACHINE_HARDWARE_H
 
-void
-initL2Cache(void)
+#include <config.h>
+#include <basic_types.h>
+#include <linker.h>
+#include <arch/object/vcpu.h>
+#include <plat/machine.h>
+#include <plat/machine/devices_gen.h>
+
+
+/* Handle a platform-reserved IRQ. */
+static inline void
+handleReservedIRQ(irq_t irq)
 {
-
 }
 
+
+
+#endif

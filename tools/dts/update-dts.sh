@@ -12,8 +12,23 @@
 #
 
 if [ -z "$1" ]; then
+    echo " minimum requisites:
+     bison:                 3.0.2 
+     flex:                 2.5.35
+     device-tree-compiler:  1.4.0
+    "
     echo "Usage: $0 </path/to/linux/kernel>"
     exit 1
+fi
+
+if [ "$1" = "--help" ] ; then
+  echo " minimum requisites:
+     bison:                 3.0.2 
+     flex:                 2.5.35
+     device-tree-compiler:  1.4.0
+     "
+     echo "Usage: $0 </path/to/linux/kernel>"
+  exit 0
 fi
 
 destdir=`pwd`
@@ -66,6 +81,7 @@ hisilicon/hi6220-hikey=hikey
 nvidia/tegra210-p2371-2180=tx1
 xilinx/avnet-ultra96-rev1=ultra96
 xilinx/zynqmp-zcu102-rev1.0=zynqmp
+renesas/r8a7795-h3ulcb=renesas_h3ulcb
 "
 
 extract_dts() {
