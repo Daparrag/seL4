@@ -96,7 +96,7 @@ include(src/plat/tx1/config.cmake)
 include(src/plat/tx2/config.cmake)
 include(src/plat/zynq7000/config.cmake)
 include(src/plat/zynqmp/config.cmake)
-include(src/plat/renesas-h3ulcb/config.cmake)
+include(src/plat/renesas_h3ulcb/config.cmake)
 # Now enshrine all the common variables in the config
 config_set(KernelArmCortexA7 ARM_CORTEX_A7 "${KernelArmCortexA7}")
 config_set(KernelArmCortexA8 ARM_CORTEX_A8 "${KernelArmCortexA8}")
